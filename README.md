@@ -17,3 +17,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 sns.set()
 ```
+## Importing dataset
+```ruby
+df = pd.read_excel(r"Data_Train.xlsx")
+```
+To display all the columns in the dataset in the excel file
+```ruby
+pd.set_option('display.max_columns', None)
+```
+df.head()
