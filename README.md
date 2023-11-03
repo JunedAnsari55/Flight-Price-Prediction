@@ -8,4 +8,11 @@ We will conduct an analysis of flight fare prediction using a machine learning d
 
 The dataset comprises 11 columns, namely Airline, Date_of_journey, Source, Destination, Route, Arrival_time, Duration, Total_stops, Additional info, and Price. It contains a total of 10,683 rows and 11 columns.
 
-# the COde
+# Importing the libraries
+
+```import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+```
