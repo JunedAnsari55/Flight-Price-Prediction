@@ -10,7 +10,8 @@ The dataset comprises 11 columns, namely Airline, Date_of_journey, Source, Desti
 
 # Importing the libraries
 
-```import numpy as np
+```ruby
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
