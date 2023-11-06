@@ -46,7 +46,7 @@ df.isnull().sum()
 ![4](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/1cad8481-bb6a-49dd-aa49-3aeb3bdb7f9c)
 
 
-**EDA**
+#EDA
 
 To extract the date from the "Date of Journey" column 
 ```ruby
@@ -62,39 +62,39 @@ df.head()
 ```
 ![5](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/e425193a-186d-4bea-a429-b8614b657bf7)
 
-# Since we have converted Date_of_Journey column into integers, Now we can drop as it is of no use.
+ Since we have converted Date_of_Journey column into integers, Now we can drop as it is of no use.
 ```ruby
 
 df.drop(["Date_of_Journey"], axis = 1, inplace = True)
 ```
-# Similar to Date_of_Journey we can extract values from Dep_Time
+ Similar to Date_of_Journey we can extract values from Dep_Time
 
-#To extract the hours from the "Dep_Time" column and adding a new column named Dep_hour
+To extract the hours from the "Dep_Time" column and adding a new column named Dep_hour
 ```ruby
 df["Dep_hour"] = pd.to_datetime(df["Dep_Time"]).dt.hour
 ```
-#To extract the minutes from the "Dep_Time" column and adding a new column named Dep_min
+To extract the minutes from the "Dep_Time" column and adding a new column named Dep_min
 ```ruby
 df["Dep_min"] = pd.to_datetime(df["Dep_Time"]).dt.minute
 ```
-# Dropping the column Dep_Time 
+ Dropping the column Dep_Time 
 ```ruby
 df.drop(["Dep_Time"], axis = 1, inplace = True)
 df.head()
 ```
 ![6](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/810460d6-8c1f-449e-a316-d5a264eb587a)
 
-# Similar to Date_of_Journey we can extract values from Arrival_Time
+ Similar to Date_of_Journey we can extract values from Arrival_Time
 
-#To extract the hours from the "Dep_Time" column and adding a new column named Arrival_hour
+To extract the hours from the "Dep_Time" column and adding a new column named Arrival_hour
 ```ruby
 df["Arrival_hour"] = pd.to_datetime(df.Arrival_Time).dt.hour
 ```
-#To extract the minutes from the "Dep_Time" column and adding a new column named Arrival_min
+To extract the minutes from the "Dep_Time" column and adding a new column named Arrival_min
 ```ruby
 df["Arrival_min"] = pd.to_datetime(df.Arrival_Time).dt.minute
 ```
-# Dropping column Arrival_Time
+ Dropping column Arrival_Time
 ```ruby
 df.drop(["Arrival_Time"], axis = 1, inplace = True)
 ```
@@ -103,9 +103,9 @@ df.head()
 ```
 ![7](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/b84aaee0-d4a8-49a7-b85d-3c57ea4a3f21)
 
-# Journey time is equal to the differnce between Departure Time and Arrival time
+ Journey time is equal to the differnce between Departure Time and Arrival time
 
-# Assigning and converting Duration column into list
+ Assigning and converting Duration column into list
 ```ruby
 journey_time = list(df["Duration"])
 
