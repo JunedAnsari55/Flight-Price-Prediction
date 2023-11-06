@@ -25,4 +25,22 @@ To display all the columns in the dataset in the excel file
 ```ruby
 pd.set_option('display.max_columns', None)
 ```
+```ruby
 df.head()
+```
+![1](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/fd6fc277-7f91-4f89-8a14-8c2b021e9bd1)
+```ruby
+df.info()
+```
+
+![2](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/1f7d2b2a-da09-47e0-b98a-2f29a5a9ccb7)
+```ruby
+print(df["Duration"].value_counts())
+df["Duration"].value_counts().plot()
+```
+![3](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/71048ab7-12cf-4895-855a-0dcdb8247df3)
+```ruby
+df.dropna(inplace = True)
+df.isnull().sum()
+```
+![4](https://github.com/JunedAnsari55/Flight-Price-Prediction/assets/145773060/1cad8481-bb6a-49dd-aa49-3aeb3bdb7f9c)
